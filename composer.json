@@ -1,6 +1,7 @@
 {
   "name": "fgoni/feriados",
   "description": "Herramienta para manejar el calendario de feriados de Argentina",
+  "minimum-stability": "stable",
   "require": {
     "php": ">=5.5.0",
     "nesbot/carbon": "^1.20"
