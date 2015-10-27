@@ -1,10 +1,12 @@
 {
   "name": "fgoni/feriados",
   "description": "Herramienta para manejar el calendario de feriados de Argentina",
+  "keywords": ["laravel", "artisan"],
   "minimum-stability": "stable",
   "require": {
     "php": ">=5.5.0",
-    "nesbot/carbon": "^1.20"
+    "nesbot/carbon": "^1.20",
+	 "illuminate/support": "~5.1"
   },
   "license": "MIT",
   "authors": [
