@@ -131,7 +131,7 @@ class Feriados
 
     public function hoyEsViernes()
     {
-        return $this->hoy === Carbon::FRIDAY;
+        return $this->hoy->dayOfWeek === Carbon::FRIDAY;
     }
 
     public function cuantoFalta()
