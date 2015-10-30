@@ -1,0 +1,103 @@
+{
+  "feriados_inamovibles":[
+    {
+      "fecha":"01/01",
+      "evento":"Año Nuevo"
+    },
+    {
+      "fecha":"16/02",
+      "evento":"Carnaval"
+    },
+    {
+      "fecha":"17/02",
+      "evento":"Carnaval"
+    },
+    {
+      "fecha":"23/03",
+      "evento":"Feriado puente turístico"
+    },
+    {
+      "fecha":"24/03",
+      "evento":"Día Nacional de la Memoria por la Verdad y la Justicia"
+    },
+    {
+      "fecha":"02/04",
+      "evento":"Día del Veterano y de los Caídos en la Guerra de Malvinas"
+    },
+    {
+      "fecha":"03/04",
+      "evento":"Viernes Santo"
+    },
+    {
+      "fecha":"01/05",
+      "evento":"Día del trabajador"
+    },
+    {
+      "fecha": "25/05",
+      "evento": "Día de la Revolución de Mayo"
+    },
+    {
+      "fecha": "20/06",
+      "evento": "Paso a la inmortalidad del General Manuel Belgrano"
+    },
+    {
+      "fecha": "09/07",
+      "evento": "Día de la Independencia"
+    },
+    {
+      "fecha": "07/12",
+      "evento": "Feriado puente turístico"
+    },
+    {
+      "fecha": "08/12",
+      "evento": "Inmaculada Concepción de María"
+    },
+    {
+      "fecha": "25/12",
+      "evento": "Navidad"
+    }
+  ],
+  "feriados_trasladables": [
+    {
+      "fecha": "17/08",
+      "fecha_traslado": "17/08",
+      "evento": "Paso a la Inmortalidad del General José de San Martín"
+    },
+    {
+      "fecha": "12/10",
+      "fecha_traslado": "12/10",
+      "evento": "Día del Respeto a la Diversidad Cultural"
+    },
+    {
+      "fecha": "23/11",
+      "fecha_traslado": "23/11",
+      "evento": "Día de la Soberanía Nacional"
+    }
+  ],
+  "dias_no_laborables": [
+    {
+      "fecha": "03/04 - 05/04 & 09/04 - 11/04",
+      "evento": "Pascuas Judías"
+    },
+    {
+      "fecha": "02/04",
+      "evento": "Jueves Santo Festividad Cristiana"
+    },
+    {
+      "fecha": "24/04",
+      "evento": "Día de acción por la tolerancia y el respeto entre los pueblos (Comunidad Armenia)"
+    },
+    {
+      "fecha": "15/09",
+      "evento": "Año Nuevo Judío"
+    },
+    {
+      "fecha": "23/09",
+      "evento": "Día del Perdón"
+    },
+    {
+      "fecha": "14/10",
+      "evento": "Año Nuevo Islámico"
+    }
+  ]
+}

@@ -18,10 +18,13 @@ class Feriados
 
     public function __construct()
     {
+        Carbon::setLocale('es');
+        setlocale(LC_ALL, 'es_ES');
+
         $this->fechas = array();
         $this->eventos = array();
         $this->hoy = Carbon::now()->setTimezone('America/Argentina/Buenos_Aires');
-        $this->json = file_get_contents('assets/feriados.json');
+        $this->json = file_get_contents(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'feriados.json');
         $this->feriados = json_decode($this->json);
         $this->inamovibles = $this->feriados->feriados_inamovibles;
         $this->trasladables = $this->feriados->feriados_trasladables;
@@ -38,8 +41,8 @@ class Feriados
     public function esFeriado()
     {
 
-
-        for ($i = 0; $i < sizeof($this->inamovibles); $i++) {
+        $cantInamovibles = sizeof($this->inamovibles);
+        for ($i = 0; $i < $cantInamovibles; $i++) {
             if ($this->hoy->isSameDay($this->fechas[$i])) {
                 return true;
             }
@@ -53,15 +56,17 @@ class Feriados
         $fechaTrasladables = $this->hoy;
         $eventoInamovibles = null;
         $eventoTrasladables = null;
+        $cantInamovibles = sizeof($this->inamovibles);
+        $cantTrasladables = sizeof($this->trasladables);
 
-        for ($i = 0; $i < sizeof($this->inamovibles); $i++) {
+        for ($i = 0; $i < $cantInamovibles; $i++) {
             if ($this->hoy->lte($this->fechas[$i])) {
                 $fechaInamovibles = $this->fechas[$i];
                 $eventoInamovibles = $this->eventos[$i];
                 break;
             }
         }
-        for ($i = sizeof($this->inamovibles); $i < sizeof($this->trasladables) + sizeof($this->inamovibles); $i++) {
+        for ($i = $cantInamovibles; $i < $cantTrasladables + $cantInamovibles; $i++) {
             if (!$this->hoy->gte($this->fechas[$i])) {
                 $fechaTrasladables = $this->fechas[$i];
                 $eventoTrasladables = $this->eventos[$i];
@@ -107,7 +112,8 @@ class Feriados
 
     private function cargarInamovibles()
     {
-        for ($i = 0; $i < count($this->inamovibles); $i++) {
+        $cantInamovibles = count($this->inamovibles);
+        for ($i = 0; $i < $cantInamovibles; $i++) {
             array_push($this->fechas, Carbon::createFromFormat('d/m', $this->inamovibles[$i]->fecha));
             array_push($this->eventos, $this->inamovibles[$i]->evento);
         }
@@ -115,7 +121,8 @@ class Feriados
 
     private function cargarTrasladables()
     {
-        for ($i = 0; $i < count($this->trasladables); $i++) {
+        $cantTrasladables = count($this->trasladables);
+        for ($i = 0; $i < $cantTrasladables; $i++) {
             array_push($this->fechas, Carbon::createFromFormat('d/m', $this->trasladables[$i]->fecha_traslado));
             array_push($this->eventos, $this->trasladables[$i]->evento);
         }
