@@ -19,3 +19,6 @@ matrix:
 addons:
     code_climate:
         repo_token: 132909497dc319666376e1c9a7a94967f78cbd1a7006c23b53331940cf3ee252
+
+after_script:
+  - vendor/bin/test-reporter
