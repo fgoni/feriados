@@ -6,9 +6,6 @@ use Fgoni\Feriados\Feriados;
 class FeriadosTest extends PHPUnit_Framework_TestCase
 {
 
-    /**
-     * @covers Feriados::hoyEsViernes
-     */
     public function testSiEsViernes()
     {
         $feriados = new Feriados();
