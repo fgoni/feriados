@@ -11,9 +11,6 @@
     "nesbot/carbon": "^1.20",
     "illuminate/support": "~5.1"
   },
-  "require-dev": {
-    "codeclimate/php-test-reporter": "dev-master"
-  },
   "license": "MIT",
   "authors": [
     {
