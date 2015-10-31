@@ -38,11 +38,16 @@ class Feriados
         return $this->hoy;
     }
 
+    public function setDay(Carbon $day)
+    {
+        return $this->hoy = $day;
+    }
+
     public function esFeriado()
     {
-
-        $cantInamovibles = sizeof($this->inamovibles);
-        for ($i = 0; $i < $cantInamovibles; $i++) {
+        $cantFechas = sizeof($this->fechas);
+        for ($i = 0; $i < $cantFechas; $i++) {
+            echo $this->fechas[$i] . PHP_EOL;
             if ($this->hoy->isSameDay($this->fechas[$i])) {
                 return true;
             }
