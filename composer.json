@@ -3,7 +3,9 @@
   "description": "Herramienta para manejar el calendario de feriados de Argentina",
   "keywords": [
     "laravel",
-    "artisan"
+    "artisan",
+    "feriados",
+    "argentina"
   ],
   "minimum-stability": "stable",
   "require": {
